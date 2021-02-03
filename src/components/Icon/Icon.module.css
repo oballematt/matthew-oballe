@@ -1,12 +1,14 @@
-a {
-    color: black;
-}
-a:hover{
-    color: black
-    
-}
 
 .backGround:hover{
     cursor: pointer;
-    transform: scale(1.5);
+    transform: scale(1.4);
+}
+
+.backGround a {
+    color: black;
+}
+
+.backGround a:hover{
+    color: black
+    
 }

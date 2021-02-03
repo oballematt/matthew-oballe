@@ -2,6 +2,24 @@
     margin-top: 5%;
     width: 100%;
     height: fit-content;
-    background-color: cyan;
+    background-color: lightblue;
     text-align: center;
+   
+}
+
+.skillsRow {
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.skillsRow p{
+    margin-top: 12px;
+}
+
+@media (max-width: 500px) {
+    .skillsRow{
+        flex-direction: column;
+    }
 }

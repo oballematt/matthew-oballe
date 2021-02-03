@@ -2,9 +2,12 @@
     margin-top: 5%;
 }
 
- .column h1, h2, h3 {
+ .aboutColumn h1, h2, h4, p {
     text-align: center;
     margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    color: white
 }
 
 .iconRow{
