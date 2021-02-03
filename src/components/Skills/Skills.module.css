@@ -1,0 +1,7 @@
+.container {
+    margin-top: 5%;
+    width: 100%;
+    height: fit-content;
+    background-color: cyan;
+    text-align: center;
+}
