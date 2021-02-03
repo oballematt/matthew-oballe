@@ -1,0 +1,17 @@
+.picture {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-position: center;
+    text-align: center;
+    margin: auto;
+}
+
+.text{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
