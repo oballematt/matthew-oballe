@@ -5,14 +5,14 @@ import DisplayPicture from '../../components/DisplayPicture/DisplayPicture'
 import bestflix from '../../assets/images/BestFlixRsz.png'
 
 const Projects = () => {
-    const [show, setShow] = useState(false)
+    const [showIndex, setShowIndex] = useState(-1)
 
-    const openModal = () => {
-        setShow(true)
+    const openModal = (ind) => {
+        setShowIndex(ind)
     }
 
     const closeModal = () => {
-        setShow(false)
+        setShowIndex(-1)
     }
 
     return (
@@ -20,9 +20,8 @@ const Projects = () => {
             <div className='container'>
                 <h1 className={styles.title}>Projects</h1>
                 <div className='row'>
-                    <DisplayPicture projectAction='project1' show={show} closed={closeModal} picture={bestflix} title='BestFlix' clicked={openModal} />
-                    <DisplayPicture projectAction='project2' show={show} closed={closeModal} picture={bestflix} title='Hello' clicked={openModal} />
-                    <DisplayPicture projectAction='project3' show={show} closed={closeModal} picture={bestflix} title='Goodbye' clicked={openModal} />
+                    <DisplayPicture projectAction='project1' show={showIndex === 1} closed={closeModal} picture={bestflix} title='BestFlix' clicked={() => openModal(1)} />
+                    <DisplayPicture projectAction='project1' show={showIndex === 2} closed={closeModal} picture={bestflix} title='hello' clicked={() => openModal(2)} />
                 </div>
             </div>
         </>
