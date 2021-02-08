@@ -1,9 +1,9 @@
 .container {
     margin-top: 80px;
-    width: 100%;
     height: fit-content;
     background: #C7D3D4FF;
     text-align: center;
+    width: 100%
 }
 
 .container h1{
