@@ -11,7 +11,7 @@ import Skills from '../../components/Skills/Skills'
 const home = () => {
     return (
         <>
-            <div className={`container ${styles.aboutContainer}`}>
+            <div className={`container ${styles.aboutContainer}`} id='home'>
                 <div className='row'>
                     <div className={`col-sm-4 ${styles.aboutColumn}`}>
                         <DisplayPicture picture={profile} />

@@ -49,7 +49,7 @@ const Projects = () => {
 
     return (
         <>
-            <div className='container'>
+            <div className='container' id='projects'>
                 <h1 className={styles.title}>Projects</h1>
                 <div className='row'>
                     {projects.map(project =>
