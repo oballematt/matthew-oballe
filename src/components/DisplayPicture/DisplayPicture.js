@@ -2,6 +2,7 @@ import React, { useReducer } from 'react'
 
 import styles from './DisplayPicture.module.css'
 import Modal from '../UI/Modal/Modal'
+import Carousel from '../UI/Carousel/Carousel'
 
 const DisplayPicture = (props) => {
     const [data, dispatch] = useReducer((state, action) => {
@@ -10,33 +11,16 @@ const DisplayPicture = (props) => {
         }
     }, {
         title: props.title,
-        description: props.description
+        description: props.description,
+        pic1: props.pic1,
+        pic2: props.pic2,
+        pic3: props.pic3
     })
    
     return (
         <>
             <Modal projectAction={props.projectAction} show={props.show} closed={props.closed} >
-                <div id="carouselExampleControls" className="carousel slide"  data-ride="carousel">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img className="d-block w-100" src={props.pic1} alt="First slide" />
-                        </div>
-                        <div className="carousel-item">
-                            <img className="d-block w-100" src={props.pic2} alt="Second slide" />
-                        </div>
-                        <div className="carousel-item">
-                            <img className="d-block w-100" src={props.pic3} alt="Third slide" />
-                        </div>
-                    </div>
-                    <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
-                    </a>
-                </div>
+              <Carousel pic1={data.pic1} pic2={data.pic2} pic3={data.pic3}  />
                 <h1>{data.title}</h1>
                 <h1>{data.description}</h1>
                 <div className={styles.button}>
