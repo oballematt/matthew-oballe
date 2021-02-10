@@ -1,8 +1,23 @@
 import React from 'react'
 
 import styles from './Contact.module.css'
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
+
+    const sendEmail = (e) => {
+     
+        e.preventDefault();
+        alert("Message Sent!")
+       
+        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_KEY, e.target, process.env.REACT_APP_EMAILJS_USER_KEY)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+           
+    }
     return (
         <div className={`${styles.container} container-fluid`} id='contact'>
             <br />
@@ -10,7 +25,7 @@ const Contact = () => {
             <p>Email: oballematt@gmail.com</p>
             <p>Phone: 512-971-8374</p>
             <div className='container'>
-                <form className="contact-form">
+                <form className="contact-form" onSubmit={sendEmail}>
                     <div className="form-row">
                         <div className="form-group col-md-12">
                             <br />
