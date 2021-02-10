@@ -33,6 +33,15 @@
 h1{
     text-align: center;
     font-family: 'Playfair Display', serif;
+    color: white
+}
+
+p{
+    text-align: center;
+    font-family: 'Meriweather', serif;
+    font-size: large;
+    font-weight: bold;
+    color: white
 }
 
 .picture:hover{
@@ -64,5 +73,12 @@ h1{
 .picture:hover .text {
     transition: 0.5s ease;
     opacity: 0;
+}
+
+@media (min-width: 200px) and (max-width: 360px) {
+    p {
+        font-size: 15px;
+    }
+
 }
 

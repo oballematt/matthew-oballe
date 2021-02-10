@@ -7,6 +7,8 @@ import bestflix from '../../assets/images/BestFlix/BestFlixRsz.png'
 import bestflix1 from '../../assets/images/BestFlix/home.PNG'
 import bestflix2 from '../../assets/images/BestFlix/profile1.PNG'
 import bestflix3 from '../../assets/images/BestFlix/tvshows.PNG'
+import bestflix4 from '../../assets/images/BestFlix/bestflixhome.PNG'
+import bestflix5 from '../../assets/images/BestFlix/bestflixlogin.PNG'
 
 import combatfitness from '../../assets/images/CombatFitness/fitfitfit.png'
 import combathome from '../../assets/images/CombatFitness/combathome.PNG'
@@ -36,7 +38,7 @@ const Projects = () => {
     const projects = [
         {
             title: 'The Shoppies',
-            description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+            description: 'Nominate 5 movies for the upcoming shoppies awards. This project was built to fulfill requirements for a shopify front end dev internship. Search for your favorite movies and nominate them for the shoppies awards. Choose wisely, however, because you can only nominate 5!',
             picture: shoppies,
             pic1: shoppies1,
             pic2: shoppies2,
@@ -47,15 +49,19 @@ const Projects = () => {
             closed: closeModal,
             clicked: () => openModal(1),
             color: 'black',
+            demo: 'https://theshoppies-mo.herokuapp.com',
+            source: 'https://github.com/oballematt/the-shoppies',
             id: 1
         },
         {
             title: 'BestFlix',
-            description: 'This is Working',
+            description: 'Find a new tv show or movie to watch before browsing Netflix! With this app, you can search for a specific taste in a show or movie and find the best titles as well as view the top 100 series or movies! Save any titles you like to your profile to watch later. ',
             picture: bestflix,
             pic1: bestflix1,
             pic2: bestflix2,
             pic3: bestflix3,
+            pic4: bestflix4,
+            pic5: bestflix5,
             show: showIndex === 2,
             closed: closeModal,
             clicked: () => openModal(2),
@@ -63,7 +69,7 @@ const Projects = () => {
         },
         {
             title: 'Combat Fitness',
-            description: 'This is also Working',
+            description: 'Finally meet your health goals with combat fitness! Browse for recipes and workouts based on your own health plan. Use the calorie calculator to calculate your specific weight goal and use the result to find recipes! Save nay recipes or videos you like to your profile!',
             picture: combatfitness,
             pic1: combathome,
             pic2: combatbulk,
@@ -97,7 +103,9 @@ const Projects = () => {
                     show={project.show}
                     color={project.color} 
                     clicked={project.clicked}
-                    closed={project.closed} />
+                    closed={project.closed}
+                    demo={project.demo}
+                    source={project.source} />
                     )}
                 </div>
             </div>

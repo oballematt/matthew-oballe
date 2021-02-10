@@ -6,29 +6,30 @@ import Carousel from '../UI/Carousel/Carousel'
 
 const DisplayPicture = (props) => {
 
-    let display =  <h1 className={styles.overlay}>See More</h1>
+    let display = <h1 className={styles.overlay}>See More</h1>
 
-    if (props.display === 'false' ) {
+    if (props.display === 'false') {
         display = null
     }
-  
-   
+
+
     return (
         <>
-            <Modal projectAction={props.projectAction} show={props.show} closed={props.closed} >
-              <Carousel pic1={props.pic1} pic2={props.pic2} pic3={props.pic3} pic4={props.pic4} pic5={props.pic5}  />
+            <Modal title={props.title} description={props.description} show={props.show} closed={props.closed} >
+                <Carousel pic1={props.pic1} pic2={props.pic2} pic3={props.pic3} pic4={props.pic4} pic5={props.pic5} />
                 <h1 >{props.title}</h1>
                 <p>{props.description}</p>
                 <div className={styles.button}>
-                    <button style={{width: '200px', height: '80px'}} type="button" className="btn btn-outline-info">View the project</button>
-                    <button style={{marginLeft: '20px', width: '200px'}} type="button" className="btn btn-outline-info">View the repo</button>
+                    <a href={props.demo} rel='noreferrer' target='_blank'><button style={{ width: '200px', height: '80px' }} type="button" className="btn btn-outline-info">DEMO</button></a>
+                    <a href={props.source} rel='noreferrer' target='_blank'><button style={{ marginLeft: '20px', width: '200px', height: '80px' }} type="button" className="btn btn-outline-info">Source Code</button></a>
                 </div>
-                <hr/>
+                <hr />
             </Modal>
-                <div className={styles.picture} style={{ backgroundImage: `url(${props.picture})` }} onClick={props.clicked}>
-                    <h1 className={styles.text}>{props.title}</h1>
-                    {display}
-                </div>
+            <div className={styles.picture} style={{ backgroundImage: `url(${props.picture})` }} onClick={props.clicked}>
+                <h1 className={styles.text}>{props.title}</h1>
+                {display}
+            </div>
+
         </>
     )
 }

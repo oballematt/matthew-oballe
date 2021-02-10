@@ -10,35 +10,35 @@ const carousel = (props) => {
             <Carousel className={styles.carousel}>
                 <Carousel.Item>
                     <img 
-                        className="d-block w-100"
+                        className="d-block"
                         src={props.pic1}
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block"
                         src={props.pic2}
                         alt="Third slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block"
                         src={props.pic3}
                         alt="Third slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block"
                         src={props.pic4}
                         alt="Fourth slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block"
                         src={props.pic5}
                         alt="Fifth slide"
                     />

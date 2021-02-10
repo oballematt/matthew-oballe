@@ -1,11 +1,30 @@
 
-.carousel img{
-    height: 700px
+ .carousel img{
+    height: 240px;
+    width: 100%
 }
 
-@media (max-width: 600px) {
-    .carousel img{
-        height: 200px;
+@media (min-width: 600px){
+    .carousel img {
+        height: 500px;
     }
 }
 
+@media (min-width: 1250px) and (max-width: 1370px){
+    .carousel img {
+        height: 300px
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1000px){
+    .carousel img {
+        height: 400px;
+    }
+}
+
+
+@media (min-width: 200px ) and (max-width: 320px){
+    .carousel img{
+        height: 115px;
+    }
+}

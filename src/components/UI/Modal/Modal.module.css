@@ -14,14 +14,31 @@
     box-shadow: 1px 1px 1px black;
     padding: 16px;
     left: 15%;
-    top: 1%;
+    top: 6.5%;
     box-sizing: border-box;
     transition: all 0.3s ease-out;
+    background-color: rgba(46, 33, 66, 0.95); ;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 200px ) and (max-width: 420px){
+    .modal{
+        top: .01%;
+        width: 100%;
+        left: .01%
+    }
+}
+@media (min-width: 1500px) and (max-width: 3000px) {
+    .modal{
+        left: 25%;
+        top: 10%;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1250px) and (max-width: 1370px){
     .modal {
-        width: 500px;
-        left: calc(50% - 250px);
+        width: 50%;
+        left: 25%;
+        top: .01%
     }
 }

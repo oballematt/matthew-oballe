@@ -8,7 +8,7 @@ const Contact = () => {
             <br />
             <h1>Contact</h1>
             <p>Email: oballematt@gmail.com</p>
-            <p>phone: 512-971-8374</p>
+            <p>Phone: 512-971-8374</p>
             <div className='container'>
                 <form className="contact-form">
                     <div className="form-row">

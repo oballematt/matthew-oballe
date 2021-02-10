@@ -5,7 +5,7 @@ import './Navigation.css'
 import { Link } from 'react-scroll'
 const Navigation = () => {
     return (
-        <div>
+        <div className='navbarStyle'>
             <nav className='navbar navbar-expand-lg fixed-top navbar-dark bg-dark'>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
