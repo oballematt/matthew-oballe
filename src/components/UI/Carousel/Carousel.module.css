@@ -1,0 +1,11 @@
+
+.carousel img{
+    height: 700px
+}
+
+@media (max-width: 600px) {
+    .carousel img{
+        height: 200px;
+    }
+}
+

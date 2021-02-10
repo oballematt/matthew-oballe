@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Navigation.css'
+
 import { Link } from 'react-scroll'
 const Navigation = () => {
     return (
@@ -15,8 +17,9 @@ const Navigation = () => {
                                 to="home"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
-                                duration={500} className="nav-link"> 
+                                offset={-80}
+                                duration={500} 
+                                className="nav-link"> 
                                 Home
                             </Link>
                         </li>
@@ -25,13 +28,22 @@ const Navigation = () => {
                                 to="projects"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
-                                duration={500} className="nav-link"> 
+                                offset={-110}
+                                duration={500} 
+                                className="nav-link"> 
                                 Projects
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/Contact">Contact</a>
+                        <Link activeClass="active"
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500} 
+                                className="nav-link"> 
+                                Contact
+                            </Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/">Resume</a>

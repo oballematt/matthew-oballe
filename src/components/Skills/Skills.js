@@ -12,7 +12,7 @@ const skills = () => {
                 <div className={`row ${styles.skillsRow}`}>
                     <div className="col-sm-3">
                         <div>
-                            <Icon icon='fab fa-js-square fa-5x' />
+                            <Icon color='yellow' icon='fab fa-js-square fa-5x' />
                             <h2>JavaScript</h2>
                             <p>jQuery, Ajax, REST, JSON, DOM</p>
                         </div>

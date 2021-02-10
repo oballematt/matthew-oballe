@@ -14,7 +14,7 @@ const home = () => {
             <div className={`container ${styles.aboutContainer}`} id='home'>
                 <div className='row'>
                     <div className={`col-sm-4 ${styles.aboutColumn}`}>
-                        <DisplayPicture picture={profile} />
+                        <DisplayPicture display='false' picture={profile} />
                         <h1>Matthew Oballe</h1>
                         <br/>
                         <h2>Full Stack Developer</h2>

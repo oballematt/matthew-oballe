@@ -6,7 +6,7 @@ const Icon = (props) => {
     return (
         <div className={styles.backGround}>
             <a href={props.link}  target="_blank" rel='noreferrer'>
-                <i className={props.icon}></i>
+                <i  className={props.icon}></i>
             </a>
         </div>
       
