@@ -6,8 +6,8 @@ import { Carousel } from 'react-bootstrap'
 
 const carousel = (props) => {
     return (
-        <div>
-            <Carousel className={styles.carousel}>
+        <div className={styles.carousel}>
+            <Carousel>
                 <Carousel.Item>
                     <img 
                         className="d-block"

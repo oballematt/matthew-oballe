@@ -14,9 +14,9 @@ const DisplayPicture = (props) => {
 
     return (
         <>
-            <Modal title={props.title} description={props.description} show={props.show} closed={props.closed} >
+            <Modal show={props.show} closed={props.closed} >
                 <Carousel pic1={props.pic1} pic2={props.pic2} pic3={props.pic3} pic4={props.pic4} pic5={props.pic5} />
-                <h1 >{props.title}</h1>
+                <h1 className={styles.mobileTitle} >{props.title}</h1>
                 <p>{props.description}</p>
                 <div className={styles.button}>
                     <a href={props.demo} rel='noreferrer' target='_blank'><button  type="button" className="btn btn-outline-info">DEMO</button></a>

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './Navigation.css'
+import resume from '../../assets/images/Resume.pdf'
 
 import { Link } from 'react-scroll'
 const Navigation = () => {
@@ -46,7 +47,7 @@ const Navigation = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Resume</a>
+                            <a className="nav-link" rel='noreferrer' target="_blank" href={resume}>Resume</a>
                         </li>
                     </ul>
                 </div>

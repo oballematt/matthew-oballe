@@ -82,11 +82,18 @@ p{
     opacity: 0;
 }
 
-@media (min-width: 200px) and (max-width: 360px) {
+@media (min-width: 200px) and (max-width: 380px) {
     p {
         font-size: 15px;
     }
 }
+
+@media (min-width: 200px) and (max-width: 380px) {
+    .mobileTitle {
+        font-size: 30px;
+    }
+}
+
 
 @media (min-width: 200px) and (max-width: 380px){
     .button button {

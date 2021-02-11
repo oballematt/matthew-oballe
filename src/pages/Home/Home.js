@@ -36,7 +36,7 @@ const home = () => {
                     </div>
                     <div className={`col-sm-8 ${styles.aboutColumn}`}>
                         <h1>About Me</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus, odio sed sagittis cursus, est erat accumsan ipsum, efficitur sagittis erat nulla a tortor. Duis ullamcorper tellus ac pulvinar gravida. Vivamus ornare metus quis libero blandit, id lobortis dolor scelerisque. Donec egestas erat vel libero pretium, non porttitor magna elementum. Curabitur vulputate turpis at nisl suscipit ullamcorper. Nullam blandit varius mi tincidunt malesuada. Maecenas elit nisl, volutpat quis aliquet a, malesuada nec dolor. Praesent ante metus, suscipit sit amet eleifend eu, congue nec mi. Mauris nunc tortor, cursus vitae ligula sed, molestie viverra dolor. Nullam mattis nisl ac auctor pellentesque. Fusce id feugiat dolor. Praesent facilisis eros tortor, vel egestas dui pellentesque et. In in mauris ac ligula suscipit auctor.</p>
+                        <p>My name is Matt and Im a full stack developer</p>
                     </div>
                 </div>
             </div>

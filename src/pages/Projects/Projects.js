@@ -31,6 +31,27 @@ import badjokesandbrews3 from '../../assets/images/BadJokesAndBrews/badjokesandb
 import badjokesandbrews4 from '../../assets/images/BadJokesAndBrews/badjokesandbrewsfour.PNG'
 import badjokesandbrews5 from '../../assets/images/BadJokesAndBrews/badjokesandbrewsfive.PNG'
 
+import employee from '../../assets/images/EmployeeDirectory/employee.PNG'
+import employee1 from '../../assets/images/EmployeeDirectory/employeeone.PNG'
+import employee2 from '../../assets/images/EmployeeDirectory/employeetwo.jpg'
+import employee3 from '../../assets/images/EmployeeDirectory/employeethree.jpg'
+import employee4 from '../../assets/images/EmployeeDirectory/employeefour.jpg'
+import employee5 from '../../assets/images/EmployeeDirectory/employeefive.jpg'
+
+import budgettracker from '../../assets/images/BudgetTracker/budgettracker.PNG'
+import budgettracker1 from '../../assets/images/BudgetTracker/budgettrackerone.PNG'
+import budgettracker2 from '../../assets/images/BudgetTracker/budgettrackertwo.PNG'
+import budgettracker3 from '../../assets/images/BudgetTracker/budgettrackerthree.PNG'
+import budgettracker4 from '../../assets/images/BudgetTracker/budgettrackerfour.PNG'
+import budgettracker5 from '../../assets/images/BudgetTracker/budgettrackerfive.PNG'
+
+import notetaker from '../../assets/images/NoteTaker/notetaker.PNG'
+import notetaker1 from '../../assets/images/NoteTaker/notetakerone.PNG'
+import notetaker2 from '../../assets/images/NoteTaker/notetakertwo.PNG'
+import notetaker3 from '../../assets/images/NoteTaker/notetakerthree.PNG'
+import notetaker4 from '../../assets/images/NoteTaker/notetakerfour.PNG'
+import notetaker5 from '../../assets/images/NoteTaker/notetakerfive.PNG'
+
 const Projects = () => {
     const [showIndex, setShowIndex] = useState(-1)
 
@@ -106,7 +127,55 @@ const Projects = () => {
             demo: 'https://bcermak.github.io/BrewsNDadJokes/',
             source: 'https://github.com/bcermak/BrewsNDadJokes',
             id: 4
-        }
+        },
+        {
+            title: 'Employee Directory',
+            description: 'In this app, the user will be able to dynamically search for any employeee. Using the search bar at the top of the page, the user will search for any employee they want to view. As theyre typing, all employess name who match the input will appear while the user is searching.',
+            picture: employee,
+            pic1: employee1,
+            pic2: employee2,
+            pic3: employee3,
+            pic4: employee4,
+            pic5: employee5,
+            show: showIndex === 5,
+            closed: closeModal,
+            clicked: () => openModal(5),
+            demo: 'https://reactemployeedirectory-mo.herokuapp.com/',
+            source: 'https://github.com/oballematt/React-Employee-Directory',
+            id: 5
+        },
+        {
+            title: 'Offline Budget Tracker',
+            description: 'Track your budget both online and offline. When the user enters an a transaction, they can enter a transaction amount and either add or subtract from their budget. If the user needs to update while on the move without internet, their data will be stored in indexedDB and will be entered into the database when they can connect to the server via the internet again.',
+            picture: budgettracker,
+            pic1: budgettracker1,
+            pic2: budgettracker2,
+            pic3: budgettracker3,
+            pic4: budgettracker4,
+            pic5: budgettracker5,
+            show: showIndex === 6,
+            closed: closeModal,
+            clicked: () => openModal(6),
+            demo: 'https://budget-trackerz1.herokuapp.com/',
+            source: 'https://github.com/oballematt/Budget-Tracker',
+            id: 6
+        },
+        {
+            title: 'Note Taker',
+            description: 'In this app, the user will be able to dynamically create notes using express. When the user creates a note, they will also be able to view and delete previous notes.',
+            picture: notetaker,
+            pic1: notetaker1,
+            pic2: notetaker2,
+            pic3: notetaker3,
+            pic4: notetaker4,
+            pic5: notetaker5,
+            show: showIndex === 7,
+            closed: closeModal,
+            clicked: () => openModal(7),
+            demo: 'https://coolestnotetaker.herokuapp.com/',
+            source: 'https://github.com/oballematt/Note-Taker',
+            id: 7
+        },
 
     ]
 
