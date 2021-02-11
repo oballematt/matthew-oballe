@@ -12,7 +12,6 @@ const DisplayPicture = (props) => {
         display = null
     }
 
-
     return (
         <>
             <Modal title={props.title} description={props.description} show={props.show} closed={props.closed} >
@@ -20,14 +19,16 @@ const DisplayPicture = (props) => {
                 <h1 >{props.title}</h1>
                 <p>{props.description}</p>
                 <div className={styles.button}>
-                    <a href={props.demo} rel='noreferrer' target='_blank'><button style={{ width: '200px', height: '80px' }} type="button" className="btn btn-outline-info">DEMO</button></a>
-                    <a href={props.source} rel='noreferrer' target='_blank'><button style={{ marginLeft: '20px', width: '200px', height: '80px' }} type="button" className="btn btn-outline-info">Source Code</button></a>
+                    <a href={props.demo} rel='noreferrer' target='_blank'><button  type="button" className="btn btn-outline-info">DEMO</button></a>
+                    <a href={props.source} rel='noreferrer' target='_blank'><button type="button" className="btn btn-outline-info">Source Code</button></a>
                 </div>
                 <hr />
             </Modal>
-            <div className={styles.picture} style={{ backgroundImage: `url(${props.picture})` }} onClick={props.clicked}>
-                <h1 className={styles.text}>{props.title}</h1>
+            <div className={`${styles.text} col`}>
+            <h1>{props.title}</h1>
+            <div className={styles.picture} style={{ backgroundImage: `url(${props.picture})`}} onClick={props.clicked}>
                 {display}
+            </div>
             </div>
 
         </>

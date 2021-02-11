@@ -1,7 +1,8 @@
 
 .backGround:hover{
     cursor: pointer;
-    transform: scale(1.4) rotateZ(-30deg) ;
+    transition: transform 0.2s;
+    transform: scale(1.4) rotateZ(-30deg);
 }
 
 .backGround a {

@@ -24,6 +24,13 @@ import shoppies3 from '../../assets/images/Shoppies/shoppiesThree.PNG'
 import shoppies4 from '../../assets/images/Shoppies/shoppiesFour.PNG'
 import shoppies5 from '../../assets/images/Shoppies/shoppiesFive.PNG'
 
+import badjokesandbrews from '../../assets/images/BadJokesAndBrews/badjokesandbrews.PNG'
+import badjokesandbrews1 from '../../assets/images/BadJokesAndBrews/badjokesandbrewsone.PNG'
+import badjokesandbrews2 from '../../assets/images/BadJokesAndBrews/badjokesandbrewstwo.PNG'
+import badjokesandbrews3 from '../../assets/images/BadJokesAndBrews/badjokesandbrewsthree.PNG'
+import badjokesandbrews4 from '../../assets/images/BadJokesAndBrews/badjokesandbrewsfour.PNG'
+import badjokesandbrews5 from '../../assets/images/BadJokesAndBrews/badjokesandbrewsfive.PNG'
+
 const Projects = () => {
     const [showIndex, setShowIndex] = useState(-1)
 
@@ -48,7 +55,6 @@ const Projects = () => {
             show: showIndex === 1,
             closed: closeModal,
             clicked: () => openModal(1),
-            color: 'black',
             demo: 'https://theshoppies-mo.herokuapp.com',
             source: 'https://github.com/oballematt/the-shoppies',
             id: 1
@@ -65,6 +71,8 @@ const Projects = () => {
             show: showIndex === 2,
             closed: closeModal,
             clicked: () => openModal(2),
+            demo: 'https://bestflix-mo.herokuapp.com',
+            source: 'https://github.com/oballematt/bestflix',
             id: 2
         },
         {
@@ -79,33 +87,52 @@ const Projects = () => {
             show: showIndex === 3,
             closed: closeModal,
             clicked: () => openModal(3),
+            demo: 'https://combatfitness.herokuapp.com',
+            source: 'https://github.com/Sarah-Nguyen1993/Combat-Fitness',
             id: 3
+        },
+        {
+            title: 'Bad Jokes and Brews',
+            description: 'Browse a list of breweries by zip code that is available in the sidebar, or via the Search by Zip function. Once a brewery-of-interest has been identified, users will be able to pinpoint that brewery using the mapbox. The last function of BrewsNDadJokes is the "Generate Joke" button located in the top right-hand side of the page.',
+            picture: badjokesandbrews,
+            pic1: badjokesandbrews1,
+            pic2: badjokesandbrews2,
+            pic3: badjokesandbrews3,
+            pic4: badjokesandbrews4,
+            pic5: badjokesandbrews5,
+            show: showIndex === 4,
+            closed: closeModal,
+            clicked: () => openModal(4),
+            demo: 'https://bcermak.github.io/BrewsNDadJokes/',
+            source: 'https://github.com/bcermak/BrewsNDadJokes',
+            id: 4
         }
-        
+
     ]
 
     return (
         <>
+            <h1 className={styles.title}>Projects</h1>
             <div className='container' id='projects'>
-                <h1 className={styles.title}>Projects</h1>
-                <div className='row'>
+                <div className={`row ${styles.row}`}>
                     {projects.map(project =>
-                    <DisplayPicture key={project.id}
-                    title={project.title} 
-                    description={project.description}
-                    picture={project.picture} 
-                    pic1={project.pic1} 
-                    pic2={project.pic2} 
-                    pic3={project.pic3}
-                    pic4={project.pic4}
-                    pic5={project.pic5} 
-                    projectAction={project.projectAction} 
-                    show={project.show}
-                    color={project.color} 
-                    clicked={project.clicked}
-                    closed={project.closed}
-                    demo={project.demo}
-                    source={project.source} />
+                        <DisplayPicture key={project.id}
+                            title={project.title}
+                            description={project.description}
+                            picture={project.picture}
+                            pic1={project.pic1}
+                            pic2={project.pic2}
+                            pic3={project.pic3}
+                            pic4={project.pic4}
+                            pic5={project.pic5}
+                            projectAction={project.projectAction}
+                            show={project.show}
+                            color={project.color}
+                            clicked={project.clicked}
+                            closed={project.closed}
+                            demo={project.demo}
+                            source={project.source}
+                            background={project.background} />
                     )}
                 </div>
             </div>

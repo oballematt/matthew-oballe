@@ -28,3 +28,9 @@
         height: 115px;
     }
 }
+
+@media (min-width: 2000px){
+    .carousel img {
+        height: 700px;
+    }
+}
