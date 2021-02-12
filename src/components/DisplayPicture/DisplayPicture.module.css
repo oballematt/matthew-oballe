@@ -82,20 +82,32 @@ p{
     opacity: 0;
 }
 
-@media (min-width: 200px) and (max-width: 380px) {
+@media (min-width: 200px) and (max-width: 600px) {
     p {
         font-size: 15px;
     }
-}
 
-@media (min-width: 200px) and (max-width: 380px) {
     .mobileTitle {
         font-size: 30px;
     }
 }
 
 
-@media (min-width: 200px) and (max-width: 380px){
+@media (min-width: 200px) and (max-width: 600px){
+    .button button {
+        width: 150px;
+    }
+}
+
+@media (min-width: 1250px) and (max-height: 720px){
+    p{
+        font-size: 15px;
+    }
+
+    .mobileTitle {
+        font-size: 30px;
+    }
+
     .button button {
         width: 150px;
     }

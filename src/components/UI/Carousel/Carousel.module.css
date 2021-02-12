@@ -44,3 +44,9 @@
         height: 700px;
     }
 }
+
+@media (min-width: 1250px) and (max-height: 600px){
+    .carousel img{
+        height: 200px
+    }
+}
