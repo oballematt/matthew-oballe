@@ -66,7 +66,7 @@ const Projects = () => {
     const projects = [
         {
             title: 'The Shoppies',
-            description: 'Nominate 5 movies for the upcoming shoppies awards. This project was built to fulfill requirements for a shopify front end dev internship. Search for your favorite movies and nominate them for the shoppies awards. Choose wisely, however, because you can only nominate 5!',
+            description: 'Find and nominate your movies for the upcoming Shoppies awards. This project was built to fulfill requirements for a Shopify front end developer internship. Search for your favorite movies and nominate them for the Shoppies awards. Choose wisely, however, because you can only nominate 5!',
             picture: shoppies,
             pic1: shoppies1,
             pic2: shoppies2,
@@ -82,7 +82,7 @@ const Projects = () => {
         },
         {
             title: 'BestFlix',
-            description: 'Find a new tv show or movie to watch before browsing Netflix! With this app, you can search for a specific taste in a show or movie and find the best titles as well as view the top 100 series or movies! Save any titles you like to your profile to watch later. ',
+            description: 'Find a new tv show or movie to watch before browsing Netflix! With this app, you can search for a specific taste in a show or movie and find the best titles or view the top 100 IMDb rated series or movies! Save any titles that catch your eye to your profile to watch later. ',
             picture: bestflix,
             pic1: bestflix1,
             pic2: bestflix2,
@@ -98,7 +98,7 @@ const Projects = () => {
         },
         {
             title: 'Combat Fitness',
-            description: 'Finally meet your health goals with combat fitness! Browse for recipes and workouts based on your own health plan. Use the calorie calculator to calculate your specific weight goal and use the result to find recipes! Save nay recipes or videos you like to your profile!',
+            description: 'Finally meet your health goals with combat fitness! Browse for recipes and workouts based on your own health plan. Use the calorie calculator to calculate your specific weight goal and use the result to find recipes! Save any recipes or videos you like to your profile!',
             picture: combatfitness,
             pic1: combathome,
             pic2: combatbulk,
@@ -114,7 +114,7 @@ const Projects = () => {
         },
         {
             title: 'Bad Jokes and Brews',
-            description: 'Browse a list of breweries by zip code that is available in the sidebar, or via the Search by Zip function. Once a brewery-of-interest has been identified, users will be able to pinpoint that brewery using the mapbox. The last function of BrewsNDadJokes is the "Generate Joke" button located in the top right-hand side of the page.',
+            description: 'Browse a list of breweries by zip code that is available in the sidebar, or via the Search by Zip function. Once a brewery-of-interest has been identified, users will be able to pinpoint that brewery using the mapbox. The last function of BrewsNDadJokes is the "Generate Joke" button located on the top right-hand side of the page.',
             picture: badjokesandbrews,
             pic1: badjokesandbrews1,
             pic2: badjokesandbrews2,
@@ -130,7 +130,7 @@ const Projects = () => {
         },
         {
             title: 'Employee Directory',
-            description: 'In this app, the user will be able to dynamically search for any employeee. Using the search bar at the top of the page, the user will search for any employee they want to view. As theyre typing, all employess name who match the input will appear while the user is searching.',
+            description: "In this app, the user will be able to dynamically search for any specific employee. Using the search bar at the top of the page, the user will search for any employee they want to view. As they're typing, all employee's names that match the input will appear while the user is searching.",
             picture: employee,
             pic1: employee1,
             pic2: employee2,
@@ -146,7 +146,7 @@ const Projects = () => {
         },
         {
             title: 'Offline Budget Tracker',
-            description: 'Track your budget both online and offline. When the user enters an a transaction, they can enter a transaction amount and either add or subtract from their budget. If the user needs to update while on the move without internet, their data will be stored in indexedDB and will be entered into the database when they can connect to the server via the internet again.',
+            description: 'Track your budget both online and offline. When the user enters a transaction, they can either add or subtract from their budget. If the user needs to update while on the move without internet, their data will be stored in indexedDB. When the user can connect to the server via the internet again, the data will then be processed into MongoDB. ',
             picture: budgettracker,
             pic1: budgettracker1,
             pic2: budgettracker2,
@@ -162,7 +162,7 @@ const Projects = () => {
         },
         {
             title: 'Note Taker',
-            description: 'In this app, the user will be able to dynamically create notes using express. When the user creates a note, they will also be able to view and delete previous notes.',
+            description: 'In this app, the user will be able to dynamically create notes using express. When the user creates a note it will be saved on the left-hand side to view later. Once the user does not need a particular note anymore, they have the option to delete any note they choose.',
             picture: notetaker,
             pic1: notetaker1,
             pic2: notetaker2,
