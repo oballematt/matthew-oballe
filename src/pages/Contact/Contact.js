@@ -21,7 +21,7 @@ const Contact = () => {
         setShow(true)
     }
 
-    const closeModal = (e) => {
+    const closeModal = () => {
         setShow(false)
         setValues(initialValues)
     }

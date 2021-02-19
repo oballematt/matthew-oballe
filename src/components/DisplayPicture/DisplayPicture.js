@@ -14,7 +14,9 @@ const DisplayPicture = (props) => {
 
     return (
         <>
+        
             <Modal show={props.show} closed={props.closed} >
+            <div className={styles.scroll}>
                 <Carousel pic1={props.pic1} pic2={props.pic2} pic3={props.pic3} pic4={props.pic4} pic5={props.pic5} />
                 <h1 className={styles.mobileTitle} >{props.title}</h1>
                 <p>{props.description}</p>
@@ -23,7 +25,9 @@ const DisplayPicture = (props) => {
                     <a href={props.source} rel='noreferrer' target='_blank'><button type="button" className="btn btn-outline-info">Source Code</button></a>
                 </div>
                 <hr />
+             </div>
             </Modal>
+     
             <div className={`${styles.text} col`}>
             <h1>{props.title}</h1>
             <div className={styles.picture} style={{ backgroundImage: `url(${props.picture})`}} onClick={props.clicked}>
