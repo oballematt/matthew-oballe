@@ -18,11 +18,7 @@ const Contact = () => {
     const [values, setValues] = useState(initialValues)
 
     const openModal = () => {
-        if (initialValues) {
-            setShow(false)
-        } else {
         setShow(true)
-        }
     }
 
     const closeModal = () => {
@@ -32,16 +28,12 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        if (initialValues){
-            alert("Please fill out all fields")
-        } else {
         emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_KEY, e.target, process.env.REACT_APP_EMAILJS_USER_KEY)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });
-        }
     }
 
     const handleInputChange = (e) => {
