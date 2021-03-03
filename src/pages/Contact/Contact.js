@@ -16,6 +16,7 @@ const initialValues = {
 const Contact = () => {
     const [show, setShow] = useState(false)
     const [values, setValues] = useState(initialValues)
+    const [errors, setErrors] = useState({})
 
     const openModal = () => {
         setShow(true)
@@ -28,12 +29,17 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        if (!validateForm()){
+            setShow(false)
+        } else {
         emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE_KEY, process.env.REACT_APP_EMAILJS_TEMPLATE_KEY, e.target, process.env.REACT_APP_EMAILJS_USER_KEY)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });
+        }
+        
     }
 
     const handleInputChange = (e) => {
@@ -42,6 +48,37 @@ const Contact = () => {
             ...values,
             [name]: value
         })
+    }
+
+   const validateForm = () => {
+        let input = values
+        let errors = {}
+        let isValid = true
+       
+
+        if (!input['from_name']) {
+            isValid = false;
+            errors['from_name'] = 'Please enter your first name'
+        };
+
+        if (!input['last_name']) {
+            isValid = false;
+            errors['last_name'] = 'Please enter your last name'
+        };
+
+        if (!input['email_name']) {
+            isValid = false;
+            errors['email_name'] = 'Please enter your email'
+        };
+
+        if (!input['message']) {
+            isValid = false;
+            errors['message'] = 'Please enter a message'
+        };
+
+        setErrors(errors);
+      
+        return isValid;
     }
 
 
@@ -61,7 +98,12 @@ const Contact = () => {
                 values3={values.email_name}
                 values4={values.message}
                 change={handleInputChange}
-                clicked={openModal} />
+                clicked={openModal}
+                errorFirst={errors.from_name} 
+                errorLast={errors.last_name} 
+                errorEmail={errors.email_name} 
+                errorMessage={errors.message} />
+            
         </>
     )
 }
