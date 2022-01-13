@@ -45,12 +45,10 @@ import budgettracker3 from '../../assets/images/BudgetTracker/budgettrackerthree
 import budgettracker4 from '../../assets/images/BudgetTracker/budgettrackerfour.PNG'
 import budgettracker5 from '../../assets/images/BudgetTracker/budgettrackerfive.PNG'
 
-import notetaker from '../../assets/images/NoteTaker/notetaker.PNG'
-import notetaker1 from '../../assets/images/NoteTaker/notetakerone.PNG'
-import notetaker2 from '../../assets/images/NoteTaker/notetakertwo.PNG'
-import notetaker3 from '../../assets/images/NoteTaker/notetakerthree.PNG'
-import notetaker4 from '../../assets/images/NoteTaker/notetakerfour.PNG'
-import notetaker5 from '../../assets/images/NoteTaker/notetakerfive.PNG'
+
+
+import spacestagram from '../../assets/images/Spacestagram/spacestagram-logo.png'
+import spacestagram1 from '../../assets/images/Spacestagram/spacestagram.png'
 
 const Projects = () => {
     const [showIndex, setShowIndex] = useState(-1)
@@ -64,6 +62,19 @@ const Projects = () => {
     }
 
     const projects = [
+        {
+            title: 'Spacestagram',
+            description: 'The out of this world image collection app that shows you real photos collected from the rovers during their missions on Mars!',
+            picture: spacestagram,
+            onePicture: true,
+            pic1: spacestagram1,
+            show: showIndex === 7,
+            closed: closeModal,
+            clicked: () => openModal(7),
+            demo: 'https://spacestagram-mo.herokuapp.com/',
+            source: 'https://github.com/oballematt/spacestagram',
+            id: 7
+        },
         {
             title: 'The Shoppies',
             description: 'Find and nominate your movies for the upcoming Shoppies awards. This project was built to fulfill requirements for a Shopify front end developer internship. Search for your favorite movies and nominate them for the Shoppies awards. Choose wisely, however, because you can only nominate 5!',
@@ -110,6 +121,7 @@ const Projects = () => {
             clicked: () => openModal(3),
             demo: 'https://combatfitness.herokuapp.com',
             source: 'https://github.com/Sarah-Nguyen1993/Combat-Fitness',
+            margin: '70px',
             id: 3
         },
         {
@@ -160,22 +172,6 @@ const Projects = () => {
             source: 'https://github.com/oballematt/Budget-Tracker',
             id: 6
         },
-        {
-            title: 'Note Taker',
-            description: 'In this app, the user will be able to dynamically create notes using express. When the user creates a note it will be saved on the left-hand side to view later. Once the user does not need a particular note anymore, they have the option to delete any note they choose.',
-            picture: notetaker,
-            pic1: notetaker1,
-            pic2: notetaker2,
-            pic3: notetaker3,
-            pic4: notetaker4,
-            pic5: notetaker5,
-            show: showIndex === 7,
-            closed: closeModal,
-            clicked: () => openModal(7),
-            demo: 'https://coolestnotetaker.herokuapp.com/',
-            source: 'https://github.com/oballematt/Note-Taker',
-            id: 7
-        },
 
     ]
 
@@ -189,6 +185,7 @@ const Projects = () => {
                             title={project.title}
                             description={project.description}
                             picture={project.picture}
+                            onePicture={project.onePicture}
                             pic1={project.pic1}
                             pic2={project.pic2}
                             pic3={project.pic3}
@@ -199,6 +196,7 @@ const Projects = () => {
                             color={project.color}
                             clicked={project.clicked}
                             closed={project.closed}
+                            margin={project.margin}
                             demo={project.demo}
                             source={project.source}
                             background={project.background} />
