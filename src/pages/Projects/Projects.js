@@ -56,7 +56,7 @@ const Projects = () => {
     const projects = [
         {
             title: 'UT Energy Hub',
-            description: 'Energy Portal used by employees of the Utilities and Energy Department at the University of Texas. This energy portal contains two user interface applications that allows the user to read, edit, or add data.',
+            description: 'Energy Portal used by employees of the Utilities and Energy Department at the University of Texas. This energy portal contains two user interface applications that allows the user to read, edit, or add data. This web app is not available to the public so I provided a screen cast of myself going through the website.',
             picture: energy,
             pic1: energy1,
             pic2: energy2,
