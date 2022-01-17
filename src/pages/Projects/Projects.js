@@ -3,13 +3,6 @@ import React, { useState } from 'react'
 import styles from './Projects.module.css'
 import DisplayPicture from '../../components/DisplayPicture/DisplayPicture'
 
-import bestflix from '../../assets/images/BestFlix/BestFlixRsz.png'
-import bestflix1 from '../../assets/images/BestFlix/home.PNG'
-import bestflix2 from '../../assets/images/BestFlix/profile1.PNG'
-import bestflix3 from '../../assets/images/BestFlix/tvshows.PNG'
-import bestflix4 from '../../assets/images/BestFlix/bestflixhome.PNG'
-import bestflix5 from '../../assets/images/BestFlix/bestflixlogin.PNG'
-
 import combatfitness from '../../assets/images/CombatFitness/fitfitfit.png'
 import combathome from '../../assets/images/CombatFitness/combathome.PNG'
 import combatbulk from '../../assets/images/CombatFitness/combatbulk.PNG'
@@ -38,13 +31,12 @@ import employee3 from '../../assets/images/EmployeeDirectory/employeethree.jpg'
 import employee4 from '../../assets/images/EmployeeDirectory/employeefour.jpg'
 import employee5 from '../../assets/images/EmployeeDirectory/employeefive.jpg'
 
-import budgettracker from '../../assets/images/BudgetTracker/budgettracker.PNG'
-import budgettracker1 from '../../assets/images/BudgetTracker/budgettrackerone.PNG'
-import budgettracker2 from '../../assets/images/BudgetTracker/budgettrackertwo.PNG'
-import budgettracker3 from '../../assets/images/BudgetTracker/budgettrackerthree.PNG'
-import budgettracker4 from '../../assets/images/BudgetTracker/budgettrackerfour.PNG'
-import budgettracker5 from '../../assets/images/BudgetTracker/budgettrackerfive.PNG'
-
+import energy from '../../assets/images/energyhub/energy.png'
+import energy1 from '../../assets/images/energyhub/energy2.png'
+import energy2 from '../../assets/images/energyhub/energy3.png'
+import energy3 from '../../assets/images/energyhub/energy4.png'
+import energy4 from '../../assets/images/energyhub/energy5.png'
+import energy5 from '../../assets/images/energyhub/energy6.png'
 
 
 import spacestagram from '../../assets/images/Spacestagram/spacestagram-logo.png'
@@ -63,17 +55,33 @@ const Projects = () => {
 
     const projects = [
         {
+            title: 'UT Energy Hub',
+            description: 'Energy Portal used by employees of the Utilities and Energy Department at the University of Texas. This energy portal contains two user interface applications that allows the user to read, edit, or add data.',
+            picture: energy,
+            pic1: energy1,
+            pic2: energy2,
+            pic3: energy3,
+            pic4: energy4,
+            pic5: energy5,
+            show: showIndex === 5,
+            closed: closeModal,
+            clicked: () => openModal(5),
+            demo: 'https://watch.screencastify.com/v/rPHVgvxHuJDUjT2hzY01',
+            source: 'https://github.com/oballematt/ecm_input_forms',
+            id: 5
+        },
+        {
             title: 'Spacestagram',
             description: 'The out of this world image collection app that shows you real photos collected from the rovers during their missions on Mars!',
             picture: spacestagram,
             onePicture: true,
             pic1: spacestagram1,
-            show: showIndex === 7,
+            show: showIndex === 6,
             closed: closeModal,
-            clicked: () => openModal(7),
+            clicked: () => openModal(6),
             demo: 'https://spacestagram-mo.herokuapp.com/',
             source: 'https://github.com/oballematt/spacestagram',
-            id: 7
+            id: 6
         },
         {
             title: 'The Shoppies',
@@ -92,22 +100,6 @@ const Projects = () => {
             id: 1
         },
         {
-            title: 'BestFlix',
-            description: 'Find a new tv show or movie to watch before browsing Netflix! With this app, you can search for a specific taste in a show or movie and find the best titles or view the top 100 IMDb rated series or movies! Save any titles that catch your eye to your profile to watch later. ',
-            picture: bestflix,
-            pic1: bestflix1,
-            pic2: bestflix2,
-            pic3: bestflix3,
-            pic4: bestflix4,
-            pic5: bestflix5,
-            show: showIndex === 2,
-            closed: closeModal,
-            clicked: () => openModal(2),
-            demo: 'https://bestflix-mo.herokuapp.com',
-            source: 'https://github.com/oballematt/bestflix',
-            id: 2
-        },
-        {
             title: 'Combat Fitness',
             description: 'Finally meet your health goals with combat fitness! Browse for recipes and workouts based on your own health plan. Use the calorie calculator to calculate your specific weight goal and use the result to find recipes! Save any recipes or videos you like to your profile!',
             picture: combatfitness,
@@ -116,13 +108,13 @@ const Projects = () => {
             pic3: combatlean,
             pic4: combathiit,
             pic5: combatprofile,
-            show: showIndex === 3,
+            show: showIndex === 2,
+            margin: '80px',
             closed: closeModal,
-            clicked: () => openModal(3),
+            clicked: () => openModal(2),
             demo: 'https://combatfitness.herokuapp.com',
             source: 'https://github.com/Sarah-Nguyen1993/Combat-Fitness',
-            margin: '70px',
-            id: 3
+            id: 2
         },
         {
             title: 'Bad Jokes and Brews',
@@ -133,12 +125,12 @@ const Projects = () => {
             pic3: badjokesandbrews3,
             pic4: badjokesandbrews4,
             pic5: badjokesandbrews5,
-            show: showIndex === 4,
+            show: showIndex === 3,
             closed: closeModal,
-            clicked: () => openModal(4),
+            clicked: () => openModal(3),
             demo: 'https://bcermak.github.io/BrewsNDadJokes/',
             source: 'https://github.com/bcermak/BrewsNDadJokes',
-            id: 4
+            id: 3
         },
         {
             title: 'Employee Directory',
@@ -149,28 +141,12 @@ const Projects = () => {
             pic3: employee3,
             pic4: employee4,
             pic5: employee5,
-            show: showIndex === 5,
+            show: showIndex === 4,
             closed: closeModal,
-            clicked: () => openModal(5),
+            clicked: () => openModal(4),
             demo: 'https://reactemployeedirectory-mo.herokuapp.com/',
             source: 'https://github.com/oballematt/React-Employee-Directory',
-            id: 5
-        },
-        {
-            title: 'Offline Budget Tracker',
-            description: 'Track your budget both online and offline. When the user enters a transaction, they can either add or subtract from their budget. If the user needs to update while on the move without internet, their data will be stored in indexedDB. When the user can connect to the server via the internet again, the data will then be processed into MongoDB. ',
-            picture: budgettracker,
-            pic1: budgettracker1,
-            pic2: budgettracker2,
-            pic3: budgettracker3,
-            pic4: budgettracker4,
-            pic5: budgettracker5,
-            show: showIndex === 6,
-            closed: closeModal,
-            clicked: () => openModal(6),
-            demo: 'https://budget-trackerz1.herokuapp.com/',
-            source: 'https://github.com/oballematt/Budget-Tracker',
-            id: 6
+            id: 4
         },
 
     ]
